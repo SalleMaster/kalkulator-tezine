@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <script defer src="/dist/js/main.js"></script>
+    <title>Kalkulator Težine</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <button id="okrugle-sipke" class="active">Okrugle Šipke</button>
+      <button id="sestougaone-sipke">Šestougaone Šipke</button>
+      <button id="okrugle-cevi">Okrugle Cevi</button>
+      <button id="pravougaone-cevi">Pravpugaone Cevi</button>
+      <button id="limovi">Limovi</button>
+    </nav>
+
+    <div class="calculator active" id="okrugle-sipke-kalkulator">
+      <img src="/dist/img/okrugle-sipke.gif" alt="Okrugle Šipke" />
+
+      <div class="app">
+        <div class="option">
+          <label for="vrsta-materijala1">Vrsta materijala:</label>
+          <select name="vrsta-materijala" id="vrsta-materijala1">
+            <option value="7850">Čelik</option>
+            <option value="7300">Gus</option>
+            <option value="8940">Bakar</option>
+            <option value="8030">Nerđajući čelik</option>
+            <option value="2712">Aluminijum</option>
+            <option value="7700">Aluminijumska bronza</option>
+            <option value="8800">Bronza</option>
+          </select>
+        </div>
+
+        <div class="option">
+          <label for="kolicina1">Količina: (komada)</label>
+          <input type="number" id="kolicina1" />
+        </div>
+
+        <div class="option">
+          <label for="precnik1">Prečnik(D): (mm)</label>
+          <input type="number" id="precnik1" />
+        </div>
+
+        <div class="option">
+          <label for="duzina1">Dužina(L): (mm)</label>
+          <input type="number" id="duzina1" />
+        </div>
+
+        <div class="submit">
+          <button class="izracunaj1">Izračunaj</button>
+
+          <div class="option">
+            <label for="tezina1">Težina: (kg)</label>
+            <input type="text" id="tezina1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

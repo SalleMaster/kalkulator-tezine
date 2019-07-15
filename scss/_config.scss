@@ -1,0 +1,22 @@
+// Variables
+$fontColor: #333;
+$primaryColor: rgb(255, 202, 182);
+
+// Basic Setup
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  color: $fontColor;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
