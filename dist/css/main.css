@@ -24,7 +24,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 2px solid coral;
+  border-bottom: 4px solid coral;
+  min-height: 85px;
 }
 
 .menu button {
@@ -39,7 +40,71 @@ body {
   background: #ffcab6;
 }
 
-.menu button:hover, .menu button.active {
+.menu button:hover {
+  background: #ffddd0;
+}
+
+.menu button.active {
   color: white;
   background: coral;
+}
+
+@media screen and (min-width: 1300px) {
+  .menu {
+    width: 1300px;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1299px) {
+  .menu {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .menu {
+    width: 100%;
+    min-height: 70px;
+  }
+  .menu button {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .menu {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 3px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    border: none;
+  }
+  .menu button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .menu {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

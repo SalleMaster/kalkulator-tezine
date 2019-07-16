@@ -1,0 +1,48 @@
+// Widescreens
+@include mediaXl {
+  .menu {
+    width: 1300px;
+    height: 100px;
+  }
+}
+
+// Large screens
+@include mediaLg {
+  .menu {
+    width: 100%;
+  }
+}
+
+// Medium screen size
+@include mediaMd {
+  .menu {
+    width: 100%;
+    min-height: 70px;
+
+    button {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Small screens
+@include mediaSm {
+  .menu {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(2, 1fr);
+    border: none;
+
+    button {
+      flex: 1;
+      font-size: 1rem;
+    }
+  }
+}
+
+// Extra small screens
+@include mediaXs {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+}

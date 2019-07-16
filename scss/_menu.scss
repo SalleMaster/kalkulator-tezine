@@ -1,7 +1,8 @@
 .menu {
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid coral;
+  border-bottom: 4px solid coral;
+  min-height: 85px;
   button {
     font-size: 1.5rem;
     color: grey;
@@ -11,7 +12,9 @@
     border: none;
     background: $primaryColor;
 
-    &:hover,
+    &:hover {
+      background: lighten($primaryColor, 5);
+    }
     &.active {
       color: white;
       background: coral;
