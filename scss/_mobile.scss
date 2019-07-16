@@ -9,14 +9,14 @@
 // Large screens
 @include mediaLg {
   .menu {
-    width: 100%;
+    width: 100vw;
   }
 }
 
 // Medium screen size
 @include mediaMd {
   .menu {
-    width: 100%;
+    width: 100vw;
     min-height: 70px;
 
     button {

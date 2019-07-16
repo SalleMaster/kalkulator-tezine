@@ -58,13 +58,13 @@ body {
 
 @media screen and (min-width: 1000px) and (max-width: 1299px) {
   .menu {
-    width: 100%;
+    width: 100vw;
   }
 }
 
 @media screen and (max-width: 999px) {
   .menu {
-    width: 100%;
+    width: 100vw;
     min-height: 70px;
   }
   .menu button {
@@ -107,4 +107,95 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.calculator-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calculator {
+  margin: 30px 0;
+  padding: 30px;
+  background: #ffefe9;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 10px coral;
+          box-shadow: 0px 0px 10px coral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.calculator .input {
+  width: 230px;
+  border: coral 1px solid;
+  color: #676767;
+  font-size: 1rem;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.calculator img {
+  border-radius: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.calculator .app {
+  margin-top: 20px;
+}
+
+.calculator .app .option {
+  color: coral;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+.calculator .app .submit {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.calculator .app .submit button {
+  height: 50px;
+  font-size: 1.3rem;
+  background: #ff8a60;
+  border: none;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 10px coral;
+          box-shadow: 0px 0px 10px coral;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.calculator .app .submit button:active {
+  -webkit-transform: translate3d(2px, 2px, 2px);
+          transform: translate3d(2px, 2px, 2px);
 }

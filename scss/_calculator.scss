@@ -3,3 +3,65 @@ body {
   flex-flow: column;
   align-items: center;
 }
+
+.calculator-wrapper {
+  flex: 1;
+  @include flexCenter;
+}
+
+.calculator {
+  margin: 30px 0;
+  padding: 30px;
+  background: lighten($primaryColor, 10);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px coral;
+  display: flex;
+  flex-flow: column;
+
+  .input {
+    width: 230px;
+    border: coral 1px solid;
+    color: darken(grey, 10);
+    font-size: 1rem;
+    padding: 5px;
+    margin-left: 20px;
+  }
+
+  img {
+    border-radius: 20px;
+    align-self: center;
+  }
+
+  .app {
+    margin-top: 20px;
+
+    .option {
+      color: coral;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .submit {
+      margin-top: 20px;
+      display: flex;
+      flex-flow: column;
+
+      button {
+        height: 50px;
+        font-size: 1.3rem;
+        background: rgb(255, 138, 96);
+        border: none;
+        color: #fff;
+        box-shadow: 0px 0px 10px coral;
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+        &:active {
+          transform: translate3d(2px, 2px, 2px);
+        }
+      }
+    }
+  }
+}
