@@ -7,3 +7,5 @@ function handleMenu() {
 }
 
 menuButtons.forEach(button => button.addEventListener('click', handleMenu));
+
+// Some comment
