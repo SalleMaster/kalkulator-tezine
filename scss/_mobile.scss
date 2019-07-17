@@ -38,11 +38,46 @@
       font-size: 1rem;
     }
   }
+
+  .calculator {
+    .app {
+      .option {
+        @include flexCenter;
+        flex-flow: column;
+
+        select,
+        input {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 // Extra small screens
 @include mediaXs {
   .menu {
     grid-template-columns: 1fr;
+  }
+
+  .calculator {
+    img {
+      max-width: 200px;
+    }
+    .app {
+      @include flexCenter;
+      flex-flow: column;
+
+      .option {
+        @include flexCenter;
+        flex-flow: column;
+
+        select,
+        input {
+          max-width: 180px;
+          margin: 0;
+        }
+      }
+    }
   }
 }
