@@ -10,11 +10,23 @@
   </head>
   <body>
     <nav class="menu">
-      <button id="okrugle-sipke" class="active">Okrugle Šipke</button>
-      <button id="sestougaone-sipke">Šestougaone Šipke</button>
-      <button id="okrugle-cevi">Okrugle Cevi</button>
-      <button id="pravougaone-cevi">Pravpugaone Cevi</button>
-      <button id="limovi">Limovi</button>
+      <button
+        id="okrugle-sipke"
+        class="active"
+        value="okrugle-sipke-kalkulator"
+      >
+        Okrugle Šipke
+      </button>
+      <button id="sestougaone-sipke" value="sestougaone-sipke-kalkulator">
+        Šestougaone Šipke
+      </button>
+      <button id="okrugle-cevi" value="okrugle-cevi-kalkulator">
+        Okrugle Cevi
+      </button>
+      <button id="pravougaone-cevi" value="pravougaone-cevi-kalkulator">
+        Pravpugaone Cevi
+      </button>
+      <button id="limovi" value="limovi-kalkulator">Limovi</button>
     </nav>
 
     <div class="calculator-wrapper">
@@ -23,12 +35,8 @@
 
         <div class="app">
           <div class="option">
-            <label for="vrsta-materijala1">Vrsta materijala:</label>
-            <select
-              name="vrsta-materijala"
-              id="vrsta-materijala1"
-              class="input"
-            >
+            <label for="tipMaterijala1">Vrsta materijala:</label>
+            <select name="vrsta-materijala" id="tipMaterijala1" class="input">
               <option value="7850">Čelik</option>
               <option value="7300">Gus</option>
               <option value="8940">Bakar</option>
@@ -40,8 +48,8 @@
           </div>
 
           <div class="option">
-            <label for="kolicina1">Količina: (komada)</label>
-            <input type="number" id="kolicina1" class="input" />
+            <label for="kolicina2">Količina: (komada)</label>
+            <input type="number" id="kolicina2" class="input" value="1" />
           </div>
 
           <div class="option">
@@ -55,11 +63,213 @@
           </div>
 
           <div class="submit">
-            <button class="izracunaj1">Izračunaj</button>
+            <button class="izracunaj1" onclick="okrugleSipke()">
+              Izračunaj
+            </button>
 
             <div class="option">
-              <label for="tezina1">Težina: (kg)</label>
-              <input type="text" id="tezina1" class="input" />
+              <label for="rezultat1">Težina: (kg)</label>
+              <input type="text" id="rezultat1" class="input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator" id="sestougaone-sipke-kalkulator">
+        <img src="/dist/img/sestougaone-sipke.gif" alt="Šestougaone Šipke" />
+
+        <div class="app">
+          <div class="option">
+            <label for="tipMaterijala2">Vrsta materijala:</label>
+            <select name="vrsta-materijala" id="tipMaterijala2" class="input">
+              <option value="7850">Čelik</option>
+              <option value="7300">Gus</option>
+              <option value="8940">Bakar</option>
+              <option value="8030">Nerđajući čelik</option>
+              <option value="2712">Aluminijum</option>
+              <option value="7700">Aluminijumska bronza</option>
+              <option value="8800">Bronza</option>
+            </select>
+          </div>
+
+          <div class="option">
+            <label for="kolicina1">Količina: (komada)</label>
+            <input type="number" id="kolicina1" class="input" value="1" />
+          </div>
+
+          <div class="option">
+            <label for="sirina2">Širina(D): (mm)</label>
+            <input type="number" id="sirina2" class="input" />
+          </div>
+
+          <div class="option">
+            <label for="duzina2">Dužina(L): (mm)</label>
+            <input type="number" id="duzina2" class="input" />
+          </div>
+
+          <div class="submit">
+            <button class="izracunaj2" onclick="sestougaoneSipke()">
+              Izračunaj
+            </button>
+
+            <div class="option">
+              <label for="rezultat2">Težina: (kg)</label>
+              <input type="text" id="rezultat2" class="input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator" id="okrugle-cevi-kalkulator">
+        <img src="/dist/img/okrugle-cevi.gif" alt="Okrugle Cevi" />
+
+        <div class="app">
+          <div class="option">
+            <label for="tipMaterijala3">Vrsta materijala:</label>
+            <select name="vrsta-materijala" id="tipMaterijala3" class="input">
+              <option value="7850">Čelik</option>
+              <option value="7300">Gus</option>
+              <option value="8940">Bakar</option>
+              <option value="8030">Nerđajući čelik</option>
+              <option value="2712">Aluminijum</option>
+              <option value="7700">Aluminijumska bronza</option>
+              <option value="8800">Bronza</option>
+            </select>
+          </div>
+
+          <div class="option">
+            <label for="kolicina3">Količina: (komada)</label>
+            <input type="number" id="kolicina3" class="input" value="1" />
+          </div>
+
+          <div class="option">
+            <label for="spoljni-precnik3">Spoljni prečnik: (mm)</label>
+            <input type="number" id="spoljni-precnik3" class="input" />
+          </div>
+
+          <div class="option">
+            <label for="debljina-zida3">Debljina zida: (mm)</label>
+            <input type="number" id="debljina-zida3" class="input" />
+          </div>
+
+          <div class="option">
+            <label for="duzina3">Dužina: (mm)</label>
+            <input type="number" id="duzina3" class="input" />
+          </div>
+
+          <div class="submit">
+            <button class="izracunaj3" onclick="okrugleCevi()">
+              Izračunaj
+            </button>
+
+            <div class="option">
+              <label for="rezultat3">Težina: (kg)</label>
+              <input type="text" id="rezultat3" class="input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator" id="pravougaone-cevi-kalkulator">
+        <img src="/dist/img/pravougaone-cevi.jpg" alt="Pravougaone Cevi" />
+
+        <div class="app">
+          <div class="option">
+            <label for="tipMaterijala-4">Vrsta materijala:</label>
+            <select name="vrsta-materijala" id="tipMaterijala-4" class="input">
+              <option value="7850">Čelik</option>
+              <option value="7300">Gus</option>
+              <option value="8940">Bakar</option>
+              <option value="8030">Nerđajući čelik</option>
+              <option value="2712">Aluminijum</option>
+              <option value="7700">Aluminijumska bronza</option>
+              <option value="8800">Bronza</option>
+            </select>
+          </div>
+
+          <div class="option">
+            <label for="kolicina-4">Količina: (komada)</label>
+            <input type="number" id="kolicina-4" class="input" value="1" />
+          </div>
+
+          <div class="option">
+            <label for="visina-a-4">Visina (A): (mm)</label>
+            <input type="number" id="visina-a-4" class="input" />
+          </div>
+
+          <div class="option">
+            <label for="sirina-b-4">Širina (B): (mm)</label>
+            <input type="number" id="sirina-b-4" class="input" />
+          </div>
+
+          <div class="option">
+            <label for="debljina-zida-4">Debljina zida: (mm)</label>
+            <input type="number" id="debljina-zida-4" class="input" />
+          </div>
+
+          <div class="option">
+            <label for="duzina-4">Dužina: (mm)</label>
+            <input type="number" id="duzina-4" class="input" />
+          </div>
+
+          <div class="submit">
+            <button class="izracunaj-4" onclick="pravougaoneCevi()">
+              Izračunaj
+            </button>
+
+            <div class="option">
+              <label for="rezultat-4">Težina: (kg)</label>
+              <input type="text" id="rezultat-4" class="input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator" id="limovi-kalkulator">
+        <img src="/dist/img/limovi.png" alt="Pravougaone Cevi" />
+
+        <div class="app">
+          <div class="option">
+            <label for="tipMaterijala-5">Vrsta materijala:</label>
+            <select name="vrsta-materijala" id="tipMaterijala-5" class="input">
+              <option value="7850">Čelik</option>
+              <option value="7300">Gus</option>
+              <option value="8940">Bakar</option>
+              <option value="8030">Nerđajući čelik</option>
+              <option value="2712">Aluminijum</option>
+              <option value="7700">Aluminijumska bronza</option>
+              <option value="8800">Bronza</option>
+            </select>
+          </div>
+
+          <div class="option">
+            <label for="kolicina-5">Količina: (komada)</label>
+            <input type="number" id="kolicina-5" class="input" value="1" />
+          </div>
+
+          <div class="option">
+            <label for="sirina-5">Širina(Š): (mm)</label>
+            <input type="number" id="sirina-5" class="input" />
+          </div>
+
+          <div class="option">
+            <label for="debljina-5">Debljina(V): (mm)</label>
+            <input type="number" id="debljina-5" class="input" />
+          </div>
+
+          <div class="option">
+            <label for="duzina-5">Dužina: (mm)</label>
+            <input type="number" id="duzina-5" class="input" />
+          </div>
+
+          <div class="submit">
+            <button class="izracunaj-5" onclick="limovi()">
+              Izračunaj
+            </button>
+
+            <div class="option">
+              <label for="rezultat-5">Težina: (kg)</label>
+              <input type="text" id="rezultat-5" class="input" />
             </div>
           </div>
         </div>

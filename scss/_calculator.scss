@@ -17,6 +17,11 @@ body {
   box-shadow: 0px 0px 10px coral;
   display: flex;
   flex-flow: column;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
 
   .input {
     width: 230px;
