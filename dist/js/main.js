@@ -19,6 +19,7 @@ menuButtons.forEach(button => button.addEventListener('click', handleMenu));
 // Okrugle Sipke Function
 function okrugleSipke() {
   var kolicina = document.getElementById('kolicina1').value;
+  console.log(kolicina);
   var tipMaterijala = document.getElementById('tipMaterijala1').value;
   var precnik = document.getElementById('precnik1').value / 2;
   var duzina = document.getElementById('duzina1').value;
@@ -28,6 +29,12 @@ function okrugleSipke() {
       (duzina / 1000) *
       tipMaterijala) /
     1000000;
+
+  var decimals = document.getElementById('broj-decimala-1').value;
+
+  if (decimals != '') {
+    rezultat = rezultat.toFixed(decimals);
+  }
 
   document.getElementById('rezultat1').value = rezultat;
 }
@@ -41,6 +48,12 @@ function sestougaoneSipke() {
   var rezultat =
     (kolicina * (sirina * sirina * 0.866) * (duzina / 1000) * tipMaterijala) /
     1000000;
+
+  var decimals = document.getElementById('broj-decimala-2').value;
+
+  if (decimals != '') {
+    rezultat = rezultat.toFixed(decimals);
+  }
 
   document.getElementById('rezultat2').value = rezultat;
 }
@@ -59,6 +72,12 @@ function okrugleCevi() {
       (duzina / 1000) *
       tipMaterijala) /
     1000000;
+
+  var decimals = document.getElementById('broj-decimala-3').value;
+
+  if (decimals != '') {
+    rezultat = rezultat.toFixed(decimals);
+  }
 
   document.getElementById('rezultat3').value = rezultat;
 }
@@ -79,6 +98,13 @@ function pravougaoneCevi() {
     kolicina;
 
   rezultat = rezultat / 1000;
+
+  var decimals = document.getElementById('broj-decimala-4').value;
+
+  if (decimals != '') {
+    rezultat = rezultat.toFixed(decimals);
+  }
+
   document.getElementById('rezultat-4').value = rezultat;
 }
 
@@ -92,6 +118,12 @@ function limovi() {
   var rezultat =
     (kolicina * (sirina * debljina) * (duzina / 1000) * tipMaterijala) /
     1000000;
+
+  var decimals = document.getElementById('broj-decimala-5').value;
+
+  if (decimals != '') {
+    rezultat = rezultat.toFixed(decimals);
+  }
 
   document.getElementById('rezultat-5').value = rezultat;
 }
