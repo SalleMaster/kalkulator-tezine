@@ -1,7 +1,6 @@
 // Variables
 $fontColor: #333;
 $primaryColor: rgb(255, 202, 182);
-$backgroundImage: 'https://source.unsplash.com/Zpdb7-owcpw/1280x720';
 
 // Basic mixins
 @mixin flexCenter {
@@ -22,16 +21,13 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   color: $fontColor;
-  background: url($backgroundImage);
-  background-position: center;
-  background-size: cover;
 }
 
 body {
   width: 100vw;
   min-height: 100vh;
   max-width: 100%;
-  background: rgba(255, 202, 182, 0.1);
+  background: rgb(238, 237, 237);
 }
 
 // Media Query Mixins

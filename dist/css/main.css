@@ -10,16 +10,13 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   color: #333;
-  background: url("https://source.unsplash.com/Zpdb7-owcpw/1280x720");
-  background-position: center;
-  background-size: cover;
 }
 
 body {
   width: 100vw;
   min-height: 100vh;
   max-width: 100%;
-  background: rgba(255, 202, 182, 0.1);
+  background: #eeeded;
 }
 
 .menu {
