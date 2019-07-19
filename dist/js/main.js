@@ -128,6 +128,8 @@ function limovi() {
   document.getElementById('rezultat-5').value = rezultat;
 }
 
+// Test comment
+
 /* Source Functions */
 
 // function okrugleSipke() {
